@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EV vs ICE: The Showdown</title>
+    <title>EV vs ICE: Final Presentation</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,7 +32,7 @@
             ["\\(", "\\)"],
           ],
         },
-        chtml: { scale: 1.5 },
+        chtml: { scale: 1.6 } /* Scale besar untuk presentasi */,
       };
     </script>
     <script
@@ -57,7 +57,7 @@
               body: ['"Outfit"', "sans-serif"],
             },
             fontSize: {
-              giant: "10rem",
+              giant: "11rem",
             },
           },
         },
@@ -88,23 +88,23 @@
       /* Blobs */
       .blob {
         position: fixed;
-        filter: blur(80px);
-        opacity: 0.4;
+        filter: blur(90px);
+        opacity: 0.3;
         z-index: -2;
-        animation: float 10s infinite alternate;
+        animation: float 12s infinite alternate;
       }
       .blob-1 {
         top: -10%;
         left: -10%;
-        width: 500px;
-        height: 500px;
+        width: 600px;
+        height: 600px;
         background: #00f3ff;
       }
       .blob-2 {
         bottom: -10%;
         right: -10%;
-        width: 600px;
-        height: 600px;
+        width: 700px;
+        height: 700px;
         background: #ff2a2a;
         animation-delay: -5s;
       }
@@ -114,50 +114,38 @@
           transform: translate(0, 0);
         }
         100% {
-          transform: translate(30px, 50px);
+          transform: translate(40px, 60px);
         }
       }
 
       /* Glass Cards */
       .glass-card {
-        background: rgba(20, 20, 20, 0.7);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.15);
+        background: rgba(18, 18, 18, 0.85);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 24px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
       }
 
       /* Deep Dive Card */
       .deep-dive-card {
-        background: rgba(0, 255, 157, 0.05);
-        border-left: 4px solid #00ff9d;
+        background: rgba(0, 255, 157, 0.08);
+        border-left: 6px solid #00ff9d;
         padding: 1.5rem;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         border-radius: 0 16px 16px 0;
       }
       .deep-dive-label {
         font-family: "Space Grotesk", sans-serif;
-        font-size: 0.9rem;
+        font-size: 1rem;
         letter-spacing: 0.1em;
         color: #00ff9d;
         font-weight: 800;
         text-transform: uppercase;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.5rem;
         display: flex;
         align-items: center;
         gap: 0.5rem;
-      }
-
-      /* Text Gradients */
-      .text-gradient-ev {
-        background: linear-gradient(to right, #00f3ff, #00ff9d);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .text-gradient-ice {
-        background: linear-gradient(to right, #ff9e00, #ff2a2a);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
       }
 
       /* Swiper Fixes */
@@ -169,31 +157,31 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 3rem;
+        padding: 2rem;
         box-sizing: border-box;
         background-color: transparent;
       }
       .swiper-pagination-bullet {
         background: #fff;
-        opacity: 0.2;
-        width: 10px;
-        height: 10px;
+        opacity: 0.3;
+        width: 12px;
+        height: 12px;
       }
       .swiper-pagination-bullet-active {
         background: #00ff9d;
         opacity: 1;
-        transform: scale(1.2);
+        transform: scale(1.3);
       }
 
       mjx-container {
         color: #e2e8f0 !important;
-        font-weight: 500 !important;
+        font-weight: 600 !important;
       }
 
       .fade-in-up {
         animation: fadeInUp 0.8s ease-out forwards;
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
       }
       .delay-100 {
         animation-delay: 0.1s;
@@ -238,35 +226,36 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <div class="text-center max-w-7xl relative z-10">
+          <div class="text-center max-w-[90vw] relative z-10">
             <div
-              class="mb-6 inline-block px-6 py-2 rounded-full border border-white/20 bg-black/40 backdrop-blur-sm text-lg font-mono text-neon-blue fade-in-up"
+              class="mb-8 inline-block px-8 py-3 rounded-full border border-white/30 bg-black/50 backdrop-blur-md text-xl font-mono text-neon-blue fade-in-up shadow-lg"
             >
               FINAL PROJECT: LM-TI-2025
             </div>
             <h1
-              class="text-8xl md:text-giant font-head font-black mb-8 leading-none fade-in-up delay-100 drop-shadow-2xl"
+              class="text-8xl md:text-9xl lg:text-giant font-head font-black mb-8 leading-[0.85] fade-in-up delay-100 drop-shadow-2xl tracking-tighter"
             >
               <span class="text-gradient-ice">ICE</span>
-              <span class="text-white text-6xl align-middle mx-4">VS</span>
+              <span class="text-white text-7xl align-middle mx-4 opacity-50"
+                >VS</span
+              >
               <span class="text-gradient-ev">EV</span>
             </h1>
             <h2
-              class="text-4xl md:text-6xl font-bold text-white mb-12 fade-in-up delay-200 text-shadow-lg tracking-tight"
+              class="text-5xl md:text-7xl font-bold text-white mb-12 fade-in-up delay-200 text-shadow-lg tracking-tight"
             >
               The Battle for Indonesian Roads
             </h2>
             <div
-              class="glass-card p-8 inline-block fade-in-up delay-300 mx-auto max-w-4xl border-neon-blue/30"
+              class="glass-card p-10 inline-block fade-in-up delay-300 mx-auto max-w-5xl border-neon-blue/40"
             >
               <p
-                class="text-gray-200 text-xl md:text-2xl font-body leading-relaxed"
+                class="text-gray-100 text-2xl md:text-3xl font-body leading-relaxed font-light"
               >
-                "Analisis Dinamika Persaingan Mobil Listrik dan Mobil Bensin di
-                Indonesia: <br />
+                "Analisis Dinamika Persaingan Mobil Listrik dan Mobil Bensin:
+                <br />
                 <span class="text-neon-blue font-bold"
-                  >Pendekatan Model Hybrid Lotka-Volterra &
-                  Bertalanffy-Pütter</span
+                  >Pendekatan Hybrid Lotka-Volterra & Bertalanffy-Pütter</span
                 >"
               </p>
             </div>
@@ -274,32 +263,32 @@
         </div>
 
         <div class="swiper-slide">
-          <div class="w-full max-w-7xl relative z-10">
+          <div class="w-full max-w-[90vw] relative z-10">
             <h2
-              class="text-6xl font-head font-bold text-white mb-16 text-center drop-shadow-lg"
+              class="text-7xl font-head font-bold text-white mb-16 text-center drop-shadow-lg"
             >
               <span class="text-neon-blue">The</span> Researchers
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
               <div
                 class="glass-card p-8 text-center hover:scale-105 transition-transform duration-300 group"
               >
                 <div
-                  class="avatar-bg w-40 h-40 mx-auto mb-6 border-4 border-neon-blue shadow-[0_0_25px_rgba(0,243,255,0.4)]"
+                  class="avatar-bg w-48 h-48 mx-auto mb-6 border-[6px] border-neon-blue shadow-[0_0_40px_rgba(0,243,255,0.4)]"
                 >
                   <img
                     src="https://api.dicebear.com/9.x/notionists/svg?seed=Jessica"
                     class="w-full h-full object-cover"
                   />
                 </div>
-                <h3 class="text-2xl font-bold">M. Adjie Pratama</h3>
-                <p class="text-gray-400 text-lg font-mono mt-2">105223015</p>
+                <h3 class="text-3xl font-bold text-white">M. Adjie Pratama</h3>
+                <p class="text-gray-400 text-xl font-mono mt-2">105223015</p>
                 <div
-                  class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity"
+                  class="mt-6 opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <span
-                    class="text-sm bg-neon-blue/20 text-neon-blue px-3 py-1 rounded font-bold"
-                    >Lead Data</span
+                    class="text-lg bg-neon-blue/20 text-neon-blue px-4 py-2 rounded-full font-bold"
+                    >Modelling</span
                   >
                 </div>
               </div>
@@ -307,21 +296,21 @@
                 class="glass-card p-8 text-center hover:scale-105 transition-transform duration-300 group"
               >
                 <div
-                  class="avatar-bg w-40 h-40 mx-auto mb-6 border-4 border-neon-orange shadow-[0_0_25px_rgba(255,158,0,0.4)]"
+                  class="avatar-bg w-48 h-48 mx-auto mb-6 border-[6px] border-neon-orange shadow-[0_0_40px_rgba(255,158,0,0.4)]"
                 >
                   <img
                     src="https://api.dicebear.com/9.x/notionists/svg?seed=Alexander"
                     class="w-full h-full object-cover"
                   />
                 </div>
-                <h3 class="text-2xl font-bold">Farhan Kholid</h3>
-                <p class="text-gray-400 text-lg font-mono mt-2">105223024</p>
+                <h3 class="text-3xl font-bold text-white">Farhan Kholid</h3>
+                <p class="text-gray-400 text-xl font-mono mt-2">105223024</p>
                 <div
-                  class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity"
+                  class="mt-6 opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <span
-                    class="text-sm bg-neon-orange/20 text-neon-orange px-3 py-1 rounded font-bold"
-                    >Modeling</span
+                    class="text-lg bg-neon-orange/20 text-neon-orange px-4 py-2 rounded-full font-bold"
+                    >Data & Code</span
                   >
                 </div>
               </div>
@@ -329,21 +318,21 @@
                 class="glass-card p-8 text-center hover:scale-105 transition-transform duration-300 group"
               >
                 <div
-                  class="avatar-bg w-40 h-40 mx-auto mb-6 border-4 border-neon-green shadow-[0_0_25px_rgba(0,255,157,0.4)]"
+                  class="avatar-bg w-48 h-48 mx-auto mb-6 border-[6px] border-neon-green shadow-[0_0_40px_rgba(0,255,157,0.4)]"
                 >
                   <img
                     src="https://api.dicebear.com/9.x/notionists/svg?seed=Liliana"
                     class="w-full h-full object-cover"
                   />
                 </div>
-                <h3 class="text-2xl font-bold">Rippun Pirdasari</h3>
-                <p class="text-gray-400 text-lg font-mono mt-2">105223027</p>
+                <h3 class="text-3xl font-bold text-white">Rippun Pirdasari</h3>
+                <p class="text-gray-400 text-xl font-mono mt-2">105223027</p>
                 <div
-                  class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity"
+                  class="mt-6 opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <span
-                    class="text-sm bg-neon-green/20 text-neon-green px-3 py-1 rounded font-bold"
-                    >Analyst</span
+                    class="text-lg bg-neon-green/20 text-neon-green px-4 py-2 rounded-full font-bold"
+                    >Idea & Problem</span
                   >
                 </div>
               </div>
@@ -351,21 +340,21 @@
                 class="glass-card p-8 text-center hover:scale-105 transition-transform duration-300 group"
               >
                 <div
-                  class="avatar-bg w-40 h-40 mx-auto mb-6 border-4 border-purple-500 shadow-[0_0_25px_rgba(168,85,247,0.4)]"
+                  class="avatar-bg w-48 h-48 mx-auto mb-6 border-[6px] border-purple-500 shadow-[0_0_40px_rgba(168,85,247,0.4)]"
                 >
                   <img
                     src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden"
                     class="w-full h-full object-cover"
                   />
                 </div>
-                <h3 class="text-2xl font-bold">Tiara Zetira</h3>
-                <p class="text-gray-400 text-lg font-mono mt-2">105223041</p>
+                <h3 class="text-3xl font-bold text-white">Tiara Zetira</h3>
+                <p class="text-gray-400 text-xl font-mono mt-2">105223041</p>
                 <div
-                  class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity"
+                  class="mt-6 opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <span
-                    class="text-sm bg-purple-500/20 text-purple-400 px-3 py-1 rounded font-bold"
-                    >Simulation</span
+                    class="text-lg bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full font-bold"
+                    >Modelling</span
                   >
                 </div>
               </div>
@@ -375,131 +364,144 @@
 
         <div class="swiper-slide">
           <div
-            class="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10"
+            class="w-full max-w-[85vw] grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10"
           >
             <div>
-              <h2 class="text-6xl font-head font-bold mb-10">
-                The <span class="text-neon-red">Problem</span>
+              <h2 class="text-7xl font-head font-bold mb-10">
+                The Root <span class="text-neon-red">Causes</span>
               </h2>
               <div class="space-y-8">
                 <div class="flex items-start gap-6">
-                  <div class="bg-white/10 p-4 rounded-xl">
-                    <i class="fa-solid fa-smog text-neon-red text-3xl"></i>
+                  <div class="bg-white/10 p-5 rounded-2xl">
+                    <i
+                      class="fa-solid fa-triangle-exclamation text-neon-red text-4xl"
+                    ></i>
                   </div>
                   <div>
-                    <h4 class="font-bold text-2xl mb-2">Polusi & Emisi</h4>
-                    <p class="text-gray-300 text-xl leading-relaxed">
-                      Kendaraan bermotor menyumbang >50% emisi Jakarta. Target
-                      Net Zero Emission 2060 sangat mendesak.
+                    <h4 class="font-bold text-3xl mb-2 text-white">
+                      1. Critical Mass
+                    </h4>
+                    <p class="text-gray-300 text-2xl leading-relaxed">
+                      Adopsi teknologi tidak otomatis. Jika gagal memprediksi
+                      titik kritis, kebijakan subsidi bisa
+                      <em>overshoot</em> anggaran.
                     </p>
                   </div>
                 </div>
                 <div class="flex items-start gap-6">
-                  <div class="bg-white/10 p-4 rounded-xl">
-                    <i class="fa-solid fa-robot text-neon-blue text-3xl"></i>
+                  <div class="bg-white/10 p-5 rounded-2xl">
+                    <i
+                      class="fa-solid fa-chart-gantt text-neon-blue text-4xl"
+                    ></i>
                   </div>
                   <div>
-                    <h4 class="font-bold text-2xl mb-2">Metode Lama Gagal</h4>
-                    <p class="text-gray-300 text-xl leading-relaxed">
-                      Prediksi linier (garis lurus) gagal menangkap fluktuasi
-                      harga BBM yang tiba-tiba (*Shock*).
+                    <h4 class="font-bold text-3xl mb-2 text-white">
+                      2. Kelemahan Metodologis
+                    </h4>
+                    <p class="text-gray-300 text-2xl leading-relaxed">
+                      Model statis menganggap parameter pasar
+                      <strong>KONSTAN</strong>. Padahal ada perang, krisis
+                      energi, dan fluktuasi subsidi.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-6">
+                  <div class="bg-white/10 p-5 rounded-2xl">
+                    <i class="fa-solid fa-brain text-neon-green text-4xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-3xl mb-2 text-white">
+                      3. Psikologis Konsumen
+                    </h4>
+                    <p class="text-gray-300 text-2xl leading-relaxed">
+                      <span class="text-neon-orange font-bold"
+                        >Price Sensitive:</span
+                      >
+                      Beda Rp100/km mengubah keputusan.<br />
+                      <span class="text-neon-red font-bold"
+                        >Range Anxiety:</span
+                      >
+                      Takut baterai habis (Logaritmik).
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="deep-dive-card">
-                <div class="deep-dive-label text-lg">
-                  <i class="fa-solid fa-bolt"></i> DEEP DIVE
-                </div>
-                <p class="text-lg text-gray-300 leading-relaxed font-light">
-                  Fenomena adopsi teknologi seringkali terjebak dalam "S-Curve
-                  Dilemma". Banyak model gagal memprediksi titik "Take-off"
-                  karena mengabaikan faktor hambatan psikologis konsumen (*Range
-                  Anxiety*) yang sifatnya non-linier.
-                </p>
-              </div>
             </div>
-            <div class="glass-card p-10 relative overflow-hidden">
+
+            <div
+              class="glass-card p-12 relative overflow-hidden flex flex-col justify-center h-full"
+            >
               <div
-                class="absolute top-0 right-0 w-40 h-40 bg-neon-red blur-[100px] opacity-20"
+                class="absolute top-0 right-0 w-64 h-64 bg-neon-blue blur-[120px] opacity-20"
               ></div>
-              <h3 class="text-3xl font-bold mb-8 border-b border-white/20 pb-4">
-                Statistik Kunci
+              <h3
+                class="text-4xl font-bold mb-10 border-b-2 border-white/20 pb-6 text-center"
+              >
+                Solusi: Model Dinamis
               </h3>
-              <ul class="space-y-6 font-mono text-xl">
-                <li class="flex justify-between items-center">
-                  <span>Produksi Mobil</span>
-                  <span class="text-neon-blue font-bold text-2xl"
-                    >> 1 Juta Unit</span
-                  >
-                </li>
-                <li class="flex justify-between items-center">
-                  <span>Target</span>
-                  <span class="text-neon-green font-bold text-2xl"
-                    >Net Zero 2060</span
-                  >
-                </li>
-                <li class="flex justify-between items-center">
-                  <span>Kondisi SPKLU</span>
-                  <span class="text-neon-red font-bold text-2xl"
-                    >Gap Tinggi</span
-                  >
-                </li>
-              </ul>
+              <p
+                class="text-2xl text-gray-200 leading-loose text-center italic"
+              >
+                "Kita butuh model yang bisa
+                <span class="text-neon-blue font-bold">'bergetar'</span>
+                merespons data eksternal secara real-time, bukan sekadar garis
+                lurus."
+              </p>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
-          <div class="w-full max-w-7xl relative z-10">
-            <h2 class="text-6xl font-head font-bold mb-16 text-center">
+          <div class="w-full max-w-[85vw] relative z-10">
+            <h2 class="text-7xl font-head font-bold mb-16 text-center">
               The <span class="text-purple-400">Hybrid</span> Theory
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
               <div
-                class="glass-card p-10 border-l-8 border-neon-blue hover:bg-white/5 transition-colors"
+                class="glass-card p-12 border-l-[12px] border-neon-blue hover:bg-white/5 transition-colors"
               >
-                <div class="flex items-center gap-4 mb-6">
+                <div class="flex items-center gap-6 mb-8">
                   <i
-                    class="fa-solid fa-arrow-up-right-dots text-neon-blue text-5xl"
+                    class="fa-solid fa-arrow-up-right-dots text-neon-blue text-6xl"
                   ></i>
-                  <h3 class="text-4xl font-bold">Bertalanffy-Pütter</h3>
+                  <h3 class="text-5xl font-bold text-white">
+                    Bertalanffy-Pütter
+                  </h3>
                 </div>
-                <p class="text-gray-300 text-xl leading-relaxed mb-6">
-                  Model Pertumbuhan Teknologi Asimetris.
+                <p class="text-gray-200 text-2xl leading-relaxed mb-8">
+                  Model Pertumbuhan Teknologi Asimetris (Kurva-J).
                 </p>
                 <div
                   class="deep-dive-card mt-0 bg-neon-blue/5 border-neon-blue"
                 >
-                  <div class="deep-dive-label text-neon-blue">
+                  <div class="deep-dive-label text-neon-blue text-xl">
                     <i class="fa-solid fa-circle-info"></i> WHY BP?
                   </div>
-                  <p class="text-lg text-gray-400">
-                    Adopsi EV lambat di awal tapi meledak di akhir. BP bisa
-                    menangkap pola kurva-J ini lebih baik daripada Kurva
-                    Logistik biasa.
+                  <p class="text-xl text-gray-300">
+                    Menangkap fase "Bayi" (lambat) hingga "Viral" (meledak).
+                    Lebih realistis daripada Kurva Logistik yang simetris kaku.
                   </p>
                 </div>
               </div>
               <div
-                class="glass-card p-10 border-l-8 border-neon-red hover:bg-white/5 transition-colors"
+                class="glass-card p-12 border-l-[12px] border-neon-red hover:bg-white/5 transition-colors"
               >
-                <div class="flex items-center gap-4 mb-6">
+                <div class="flex items-center gap-6 mb-8">
                   <i
-                    class="fa-solid fa-users-viewfinder text-neon-red text-5xl"
+                    class="fa-solid fa-users-viewfinder text-neon-red text-6xl"
                   ></i>
-                  <h3 class="text-4xl font-bold">Lotka-Volterra</h3>
+                  <h3 class="text-5xl font-bold text-white">Lotka-Volterra</h3>
                 </div>
-                <p class="text-gray-300 text-xl leading-relaxed mb-6">
+                <p class="text-gray-200 text-2xl leading-relaxed mb-8">
                   Model Kompetisi "Predator-Mangsa".
                 </p>
                 <div class="deep-dive-card mt-0 bg-neon-red/5 border-neon-red">
-                  <div class="deep-dive-label text-neon-red">
+                  <div class="deep-dive-label text-neon-red text-xl">
                     <i class="fa-solid fa-circle-info"></i> WHY LV?
                   </div>
-                  <p class="text-lg text-gray-400">
-                    Mewakili sifat "Zero-Sum Game". Pembelian mobil listrik
-                    seringkali berarti hilangnya satu pembelian mobil bensin.
+                  <p class="text-xl text-gray-300">
+                    Mewakili sifat "Zero-Sum Game". Satu mobil listrik terjual =
+                    Satu pembeli mobil bensin hilang.
                   </p>
                 </div>
               </div>
@@ -508,255 +510,268 @@
         </div>
 
         <div class="swiper-slide">
-          <div class="w-full max-w-6xl relative z-10">
-            <div class="flex items-center gap-6 mb-12">
+          <div class="w-full max-w-[90vw] relative z-10">
+            <div class="flex items-center gap-8 mb-12">
               <span
-                class="bg-neon-blue text-black font-bold px-4 py-2 rounded-lg text-xl"
+                class="bg-neon-blue text-black font-bold px-6 py-2 rounded-xl text-2xl"
                 >Model 1</span
               >
-              <h2 class="text-5xl font-head font-bold">
+              <h2 class="text-6xl font-head font-bold">
                 Bertalanffy-Pütter (Growth)
               </h2>
             </div>
 
             <div
-              class="glass-card p-12 mb-10 text-center border-2 border-white/10"
+              class="glass-card p-12 mb-12 text-center border-2 border-white/10"
             >
               <p
-                class="text-4xl font-serif italic mb-2 tracking-wide text-white"
+                class="text-5xl font-serif italic mb-2 tracking-wide text-white"
               >
                 $$ \frac{dy}{dt} = \underbrace{p \cdot
-                y(t)^a}_{\text{Pembangunan}} - \underbrace{q \cdot
-                y(t)^b}_{\text{Hambatan}} $$
+                y(t)^a}_{\text{PERTUMBUHAN}} - \underbrace{q \cdot
+                y(t)^b}_{\text{HAMBATAN}} $$
               </p>
             </div>
 
-            <div class="grid grid-cols-2 gap-10">
-              <div class="p-6 rounded-2xl bg-white/5">
-                <h4 class="text-neon-green font-bold text-3xl mb-4">
-                  Fase Pembangunan (+)
+            <div class="grid grid-cols-2 gap-12">
+              <div
+                class="p-8 rounded-3xl bg-white/5 border border-neon-green/20"
+              >
+                <h4 class="text-neon-green font-bold text-4xl mb-6">
+                  <i class="fa-solid fa-chart-line"></i> Parameter $p$ (Inovasi)
                 </h4>
-                <p class="text-gray-200 text-xl leading-relaxed">
-                  Didorong oleh Marketing, Inovasi, dan *Word of Mouth*.
-                  Diwakili parameter $p$.
+                <p class="text-gray-200 text-2xl leading-relaxed">
+                  Berfungsi sebagai <strong>Faktor Pertumbuhan</strong>.
+                  Menentukan seberapa cepat teknologi ini "Viral" di awal lewat
+                  marketing & inovasi.
                 </p>
               </div>
-              <div class="p-6 rounded-2xl bg-white/5">
-                <h4 class="text-neon-red font-bold text-3xl mb-4">
-                  Fase Penghambatan (-)
+              <div class="p-8 rounded-3xl bg-white/5 border border-neon-red/20">
+                <h4 class="text-neon-red font-bold text-4xl mb-6">
+                  <i class="fa-solid fa-hand-paper"></i> Parameter $q$
+                  (Saturasi)
                 </h4>
-                <p class="text-gray-200 text-xl leading-relaxed">
-                  Didorong oleh kejenuhan pasar (*saturation*) dan depresiasi
-                  unit. Diwakili parameter $q$.
+                <p class="text-gray-200 text-2xl leading-relaxed">
+                  Berfungsi sebagai <strong>Faktor Hambatan</strong>. Mewakili
+                  depresiasi, kerusakan, atau kejenuhan pasar (Market Saturation
+                  Level).
                 </p>
               </div>
             </div>
 
-            <div class="deep-dive-card mt-8">
-              <div class="deep-dive-label">
-                <i class="fa-solid fa-calculator"></i> SYARAT STABILITAS
+            <div class="deep-dive-card mt-10">
+              <div class="deep-dive-label text-lg">
+                <i class="fa-solid fa-calculator"></i> SYARAT MUTLAK: $b > a$
               </div>
-              <p class="text-lg text-gray-300">
-                Agar model stabil, wajib berlaku syarat $b > a$. Titik jenuh
-                pasar ($K$) tercapai saat laju pembangunan = laju hambatan.
+              <p class="text-2xl text-gray-300 leading-relaxed">
+                Agar model stabil, wajib berlaku $b > a$. Agar saat populasi
+                membesar, efek hambatan menyusul dan menghentikan pertumbuhan.
+                Jika $a > b$, populasi akan tumbuh ke tak hingga.
               </p>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
-          <div class="w-full max-w-6xl relative z-10">
-            <div class="flex items-center gap-6 mb-12">
+          <div class="w-full max-w-[85vw] relative z-10">
+            <div class="flex items-center gap-8 mb-12">
               <span
-                class="bg-neon-red text-black font-bold px-4 py-2 rounded-lg text-xl"
+                class="bg-neon-red text-black font-bold px-6 py-2 rounded-xl text-2xl"
                 >Model 2</span
               >
-              <h2 class="text-5xl font-head font-bold">
+              <h2 class="text-6xl font-head font-bold">
                 Lotka-Volterra (Kompetisi)
               </h2>
             </div>
 
             <div
-              class="glass-card p-12 mb-10 text-center border-2 border-neon-red/30"
+              class="glass-card p-12 mb-12 text-center border-2 border-neon-red/30"
             >
               <p
-                class="text-4xl font-serif italic mb-2 tracking-wide text-white"
+                class="text-5xl font-serif italic mb-2 tracking-wide text-white"
               >
-                $$ \text{Interaksi} = - \beta \cdot x(t) \cdot y(t) $$
+                $$ \text{Kompetisi} = - \beta \cdot x(t) \cdot y(t) $$
               </p>
             </div>
 
-            <div class="grid grid-cols-2 gap-8 mb-8">
-              <div class="flex gap-6 items-center bg-white/5 p-6 rounded-xl">
-                <div
-                  class="w-16 h-16 rounded-full bg-neon-orange flex items-center justify-center font-bold text-black text-2xl"
+            <div class="grid grid-cols-2 gap-10">
+              <div class="glass-card p-10">
+                <h4
+                  class="text-neon-orange font-bold text-3xl mb-6 border-b border-white/20 pb-4"
                 >
-                  LMA
-                </div>
-                <div>
-                  <h4 class="font-bold text-2xl text-neon-orange">
-                    Law of Mass Action
-                  </h4>
-                  <p class="text-gray-300 text-lg mt-1">
-                    Interaksi terjadi saat kedua spesies bertemu.
-                  </p>
-                </div>
+                  Legenda Simbol
+                </h4>
+                <ul class="space-y-4 text-2xl text-gray-300 font-mono">
+                  <li>
+                    <strong class="text-white">$x(t)$</strong> : Populasi Mobil
+                    Bensin.
+                  </li>
+                  <li>
+                    <strong class="text-white">$y(t)$</strong> : Populasi Mobil
+                    Listrik.
+                  </li>
+                  <li>
+                    <strong class="text-white">$\beta$</strong> : Koefisien
+                    Kompetisi (Peluang Beralih).
+                  </li>
+                </ul>
               </div>
-              <div class="flex gap-6 items-center bg-white/5 p-6 rounded-xl">
-                <div
-                  class="w-16 h-16 rounded-full bg-neon-red flex items-center justify-center font-bold text-black text-3xl"
-                >
-                  $\beta$
-                </div>
-                <div>
-                  <h4 class="font-bold text-2xl text-neon-red">
-                    Parameter Beta
-                  </h4>
-                  <p class="text-gray-300 text-lg mt-1">
-                    Tingkat "kebuasan" mengambil pasar.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div class="deep-dive-card">
-              <div class="deep-dive-label">
-                <i class="fa-solid fa-lightbulb"></i> ANALOGI PASAR
+              <div class="glass-card p-10 flex flex-col justify-center">
+                <h4
+                  class="text-neon-green font-bold text-3xl mb-6 border-b border-white/20 pb-4"
+                >
+                  Analogi Pasar
+                </h4>
+                <p class="text-gray-200 text-2xl leading-relaxed italic">
+                  "Semakin banyak mobil listrik di jalan ($y$), semakin sering
+                  pengguna mobil bensin ($x$) melihatnya. Ini meningkatkan
+                  'pertemuan' dan peluang beralih ($\beta$)."
+                </p>
               </div>
-              <p class="text-lg text-gray-300">
-                Semakin banyak mobil listrik di jalan ($y$), semakin sering
-                pengguna mobil bensin ($x$) melihatnya. Ini meningkatkan
-                "pertemuan" dan peluang beralih ($\beta$).
-              </p>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
-          <div class="w-full max-w-7xl text-center relative z-10">
-            <h2 class="text-6xl font-head font-bold mb-6">
+          <div class="w-full max-w-[90vw] text-center relative z-10">
+            <h2 class="text-7xl font-head font-bold mb-8">
               Total Cost of Ownership
             </h2>
-            <p class="text-2xl text-gray-300 mb-12">
+            <p class="text-3xl text-gray-300 mb-16">
               Konversi Parameter "Apple to Apple" (Rp/km)
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
               <div
-                class="glass-card p-10 transform hover:scale-105 transition-transform duration-300"
+                class="glass-card p-12 transform hover:scale-105 transition-transform duration-300"
               >
-                <div class="text-neon-orange text-6xl mb-6">
+                <div class="text-neon-orange text-8xl mb-8">
                   <i class="fa-solid fa-gas-pump"></i>
                 </div>
-                <h3 class="font-bold text-3xl mb-4 text-neon-orange">
+                <h3 class="font-bold text-4xl mb-6 text-neon-orange">
                   Biaya BBM
                 </h3>
-                <div class="text-xl font-bold text-white">
+                <div class="text-3xl font-bold text-white">
                   $$ C_{ICE} = \frac{\text{Harga (Rp/L)}}{\text{Km/L}} $$
                 </div>
               </div>
 
-              <div class="text-6xl text-gray-500 font-bold">VS</div>
+              <div class="text-8xl text-gray-500 font-bold">VS</div>
 
               <div
-                class="glass-card p-10 transform hover:scale-105 transition-transform duration-300"
+                class="glass-card p-12 transform hover:scale-105 transition-transform duration-300"
               >
-                <div class="text-neon-green text-6xl mb-6">
+                <div class="text-neon-green text-8xl mb-8">
                   <i class="fa-solid fa-bolt"></i>
                 </div>
-                <h3 class="font-bold text-3xl mb-4 text-neon-green">
+                <h3 class="font-bold text-4xl mb-6 text-neon-green">
                   Biaya EV
                 </h3>
-                <div class="text-xl font-bold text-white">
+                <div class="text-3xl font-bold text-white">
                   $$ C_{EV} = \frac{\text{Tarif (Rp/kWh)}}{\text{Km/kWh}} $$
                 </div>
               </div>
             </div>
 
-            <div class="deep-dive-card mt-12 text-left max-w-4xl mx-auto">
-              <div class="deep-dive-label">
+            <div class="deep-dive-card mt-16 text-left max-w-5xl mx-auto">
+              <div class="deep-dive-label text-xl">
                 <i class="fa-solid fa-gear"></i> ASUMSI MODEL
               </div>
-              <p class="text-lg text-gray-300">
+              <p class="text-2xl text-gray-300">
                 Kami fokus pada <strong>Biaya Operasional Energi</strong> karena
                 variabel ini paling fluktuatif (naik turun harga
-                Pertamax/Listrik) dan paling dirasakan konsumen setiap hari
-                dibandingkan pajak tahunan.
+                Pertamax/Listrik) dan paling dirasakan konsumen setiap hari.
               </p>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
-          <div class="w-full max-w-7xl relative z-10">
-            <h2 class="text-5xl font-head font-bold mb-4">
+          <div
+            class="w-full max-w-[90vw] relative z-10 h-screen flex flex-col justify-center"
+          >
+            <h2 class="text-6xl font-head font-bold mb-6">
               The Hybrid Solution
             </h2>
-            <p class="text-2xl text-gray-400 mb-10">
-              Sistem Persamaan Diferensial Terkopel
-            </p>
 
-            <div class="glass-card p-12 relative overflow-hidden">
-              <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                  <h4
-                    class="text-3xl font-bold text-neon-orange mb-6 border-b border-neon-orange/30 pb-2"
-                  >
-                    Laju Mobil Bensin ($z_1$)
-                  </h4>
-                  <div class="text-2xl text-white font-medium leading-relaxed">
-                    $$ \frac{dz_1}{dt} = (p_1 z_1^{a_1} - q_1 z_1^{b_1}) -
-                    \beta(t) z_1 z_2 $$
-                  </div>
-                  <p class="text-lg text-gray-500 mt-4 italic">
-                    "Pertumbuhan Alami dikurangi Dimangsa EV"
-                  </p>
-                </div>
-
-                <div>
-                  <h4
-                    class="text-3xl font-bold text-neon-green mb-6 border-b border-neon-green/30 pb-2"
-                  >
-                    Laju Mobil Listrik ($z_2$)
-                  </h4>
-                  <div class="text-2xl text-white font-medium leading-relaxed">
-                    $$ \frac{dz_2}{dt} = (p_2 z_2^{a_2} - q_2(t) z_2^{b_2}) -
-                    \beta_{21} z_1 z_2 $$
-                  </div>
-                  <p class="text-lg text-gray-500 mt-4 italic">
-                    "Pertumbuhan Alami (Hambatan Dinamis)"
-                  </p>
-                </div>
+            <div
+              class="glass-card p-10 mb-8 relative overflow-hidden text-center bg-black/40"
+            >
+              <div
+                class="text-3xl md:text-4xl text-white font-medium leading-relaxed py-2"
+              >
+                $$ \frac{dz_1}{dt} = \underbrace{(p_1 z_1^{a_1} - q_1
+                z_1^{b_1})}_{\text{Pertumbuhan Internal}} -
+                \underbrace{\beta_{12}(t) z_1 z_2}_{\text{Diambil EV}} $$
+              </div>
+              <div class="w-full h-px bg-white/20 my-4"></div>
+              <div
+                class="text-3xl md:text-4xl text-white font-medium leading-relaxed py-2"
+              >
+                $$ \frac{dz_2}{dt} = \underbrace{(p_2 z_2^{a_2} - q_2(t)
+                z_2^{b_2})}_{\text{Pertumbuhan Internal}} -
+                \underbrace{\beta_{21}(t) z_1 z_2}_{\text{Efek Balik}} $$
               </div>
             </div>
 
-            <div class="deep-dive-card mt-8">
-              <div class="deep-dive-label">
-                <i class="fa-solid fa-microchip"></i> COMPUTATIONAL NOTE
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 h-[35vh]">
+              <div class="glass-card p-8 overflow-y-auto scroll-content">
+                <h4
+                  class="text-neon-blue font-bold text-2xl mb-6 border-b border-white/20 pb-2"
+                >
+                  Legenda Simbol
+                </h4>
+                <ul class="space-y-4 text-xl text-gray-300 font-mono">
+                  <li>
+                    <strong class="text-white">$z(t)$</strong> : Populasi
+                    kendaraan (0-1).
+                  </li>
+                  <li>
+                    <strong class="text-white">$p$</strong> : Faktor
+                    Pertumbuhan.
+                  </li>
+                  <li>
+                    <strong class="text-white">$q$</strong> : Faktor Hambatan.
+                  </li>
+                  <li>
+                    <strong class="text-white">$\beta(t)$</strong> : Fungsi
+                    Kompetisi Dinamis.
+                  </li>
+                </ul>
               </div>
-              <p class="text-lg text-gray-300">
-                Suku $\beta(t)$ dan $q_2(t)$ adalah
-                <strong>Fungsi Waktu</strong>, bukan konstanta. Ini membuat
-                persamaan menjadi non-linier dan wajib diselesaikan dengan
-                metode numerik (Runge-Kutta).
-              </p>
+
+              <div class="glass-card p-8 flex flex-col justify-center">
+                <h4
+                  class="text-neon-green font-bold text-2xl mb-6 border-b border-white/20 pb-2"
+                >
+                  Logika Sistem
+                </h4>
+                <p class="text-2xl text-gray-200 leading-relaxed">
+                  Laju perubahan ($\frac{dz}{dt}$) adalah hasil dari
+                  pertarungan:
+                  <br /><br />
+                  <span class="text-neon-blue">Internal (BP)</span> dikurangi
+                  <span class="text-neon-red">Eksternal (LV)</span>.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
-          <div class="w-full max-w-7xl relative z-10">
-            <div class="text-center mb-12">
+          <div class="w-full max-w-[90vw] relative z-10">
+            <div class="text-center mb-10">
               <span
-                class="text-sm font-mono border border-neon-blue px-3 py-1 rounded text-neon-blue tracking-widest"
+                class="text-lg font-mono border border-neon-blue px-4 py-2 rounded text-neon-blue tracking-widest"
                 >RESEARCH NOVELTY</span
               >
-              <h2 class="text-6xl font-head font-bold mt-6">
+              <h2 class="text-7xl font-head font-bold mt-4">
                 Dynamic Parameters
               </h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div class="glass-card p-10">
                 <h3
                   class="text-3xl font-bold mb-6 flex items-center gap-4 text-white"
@@ -765,14 +780,26 @@
                   Dinamika Beta ($\beta$)
                 </h3>
                 <div
-                  class="bg-black/40 p-6 rounded-xl text-xl font-mono text-neon-orange mb-4 border border-white/10"
+                  class="bg-black/40 p-6 rounded-2xl text-xl font-mono text-neon-orange mb-6 border border-white/10 text-center"
                 >
-                  $$ \beta(t) \propto \exp\left( \frac{C_{BBM} -
-                  C_{EV}}{C_{BBM}} \right) $$
+                  $$ \beta_{12}(t) = \beta_{base} \cdot \exp\left( k \cdot
+                  \frac{C_{BBM}(t) - C_{EV}(t)}{C_{BBM}(t)} \right) $$
                 </div>
-                <p class="text-xl text-gray-300">
-                  "Kompetisi berubah real-time mengikuti selisih harga."
-                </p>
+                <div class="space-y-4">
+                  <p
+                    class="text-xl text-gray-300 border-l-4 border-neon-orange pl-4"
+                  >
+                    <strong class="text-white">$\beta_{base}$:</strong>
+                    Kompetisi murni/dasar (jika harga sama).
+                  </p>
+                  <p
+                    class="text-xl text-gray-300 border-l-4 border-neon-orange pl-4"
+                  >
+                    <strong class="text-white">Kenapa Exp?</strong> Respon
+                    manusia tidak linier. Beda harga sedikit = santai. Beda
+                    harga banyak = migrasi massal (ledakan).
+                  </p>
+                </div>
               </div>
 
               <div class="glass-card p-10">
@@ -785,80 +812,79 @@
                   Dinamika Hambatan ($q$)
                 </h3>
                 <div
-                  class="bg-black/40 p-6 rounded-xl text-xl font-mono text-neon-green mb-4 border border-white/10"
+                  class="bg-black/40 p-6 rounded-2xl text-2xl font-mono text-neon-green mb-6 border border-white/10 text-center"
                 >
-                  $$ q(t) = \frac{q_{base}}{\ln(1 + \text{SPKLU})} $$
+                  $$ q_2(t) = \frac{q_{base}}{\ln(1 + \text{SPKLU})} $$
                 </div>
-                <p class="text-xl text-gray-300">
-                  "Efek infrastruktur mengikuti *Diminishing Returns*."
-                </p>
+                <div class="space-y-4">
+                  <p
+                    class="text-xl text-gray-300 border-l-4 border-neon-green pl-4"
+                  >
+                    <strong class="text-white">$q_{base}$:</strong> Hambatan
+                    dasar teknologi (misal: harga unit mahal).
+                  </p>
+                  <p
+                    class="text-xl text-gray-300 border-l-4 border-neon-green pl-4"
+                  >
+                    <strong class="text-white">Kenapa Ln?</strong>
+                    <em>Law of Diminishing Returns</em>. 10 SPKLU di desa
+                    dampaknya raksasa. 10 SPKLU di Jakarta dampaknya kecil.
+                  </p>
+                </div>
               </div>
-            </div>
-
-            <div class="deep-dive-card mt-10">
-              <div class="deep-dive-label">
-                <i class="fa-solid fa-star"></i> MENGAPA DINAMIS ITU PENTING?
-              </div>
-              <p class="text-lg text-gray-300">
-                Model statis gagal total saat ada "Guncangan". Saat harga BBM
-                naik (Sep 2022), model dinamis kami langsung merespons dengan
-                $\beta$ yang melonjak, memprediksi perpindahan konsumen yang
-                akurat.
-              </p>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
-          <div class="w-full max-w-7xl relative z-10">
-            <h2 class="text-6xl font-head font-bold mb-16 text-center">
+          <div class="w-full max-w-[85vw] relative z-10">
+            <h2 class="text-7xl font-head font-bold mb-16 text-center">
               Workflow Penelitian
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
               <div
-                class="glass-card p-10 text-center bg-dark-bg/60 border-t-4 border-neon-blue"
+                class="glass-card p-12 text-center bg-dark-bg/60 border-t-8 border-neon-blue"
               >
-                <div class="text-neon-blue font-bold text-6xl mb-6">01</div>
-                <h3 class="font-bold text-3xl mb-4 text-white">Data</h3>
-                <p class="text-xl text-gray-400 leading-relaxed">
+                <div class="text-neon-blue font-bold text-7xl mb-6">01</div>
+                <h3 class="font-bold text-4xl mb-4 text-white">Data</h3>
+                <p class="text-2xl text-gray-400 leading-relaxed">
                   GAIKINDO, PLN, ESDM.<br />Time Series 2021-2024.
                 </p>
               </div>
 
               <div
-                class="glass-card p-10 text-center bg-dark-bg/60 border-t-4 border-purple-500"
+                class="glass-card p-12 text-center bg-dark-bg/60 border-t-8 border-purple-500"
               >
-                <div class="text-purple-500 font-bold text-6xl mb-6">02</div>
-                <h3 class="font-bold text-3xl mb-4 text-white">Process</h3>
-                <p class="text-xl text-gray-400 leading-relaxed">
+                <div class="text-purple-500 font-bold text-7xl mb-6">02</div>
+                <h3 class="font-bold text-4xl mb-4 text-white">Process</h3>
+                <p class="text-2xl text-gray-400 leading-relaxed">
                   Normalisasi (0-1).<br />Interpolasi Data.<br />Konversi ke
                   Rp/km.
                 </p>
               </div>
 
               <div
-                class="glass-card p-10 text-center bg-dark-bg/60 border-t-4 border-neon-green"
+                class="glass-card p-12 text-center bg-dark-bg/60 border-t-8 border-neon-green"
               >
-                <div class="text-neon-green font-bold text-6xl mb-6">03</div>
-                <h3 class="font-bold text-3xl mb-4 text-white">Compute</h3>
-                <p class="text-xl text-gray-400 leading-relaxed">
+                <div class="text-neon-green font-bold text-7xl mb-6">03</div>
+                <h3 class="font-bold text-4xl mb-4 text-white">Compute</h3>
+                <p class="text-2xl text-gray-400 leading-relaxed">
                   Solver: <strong>RK45</strong>.<br />Optimizer:
                   <strong>Nelder-Mead</strong>.<br />Language: Python.
                 </p>
               </div>
             </div>
 
-            <div class="deep-dive-card mt-12">
-              <div class="deep-dive-label">
+            <div class="deep-dive-card mt-16">
+              <div class="deep-dive-label text-xl">
                 <i class="fa-solid fa-code"></i> TEKNIS RK45
               </div>
-              <p class="text-lg text-gray-300">
+              <p class="text-2xl text-gray-300">
                 Kami menggunakan
                 <strong>Runge-Kutta Order 5 (RK45)</strong> karena memiliki
                 *adaptive step size*. Saat data bergejolak (ledakan EV 2024),
-                RK45 memperkecil langkah hitungan agar akurat, namun mempercepat
-                hitungan saat data stabil.
+                RK45 memperkecil langkah hitungan agar akurat.
               </p>
             </div>
           </div>
@@ -866,63 +892,62 @@
 
         <div class="swiper-slide">
           <div
-            class="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-3 gap-12 items-center relative z-10"
+            class="w-full max-w-[90vw] grid grid-cols-1 lg:grid-cols-3 gap-16 items-center relative z-10"
           >
             <div class="lg:col-span-2">
               <div
-                class="glass-card p-2 border border-white/20 relative group hover:border-neon-green transition-colors duration-300 cursor-zoom-in"
+                class="glass-card p-4 border border-white/20 relative group hover:border-neon-green transition-colors duration-300 cursor-zoom-in"
                 onclick="toggleModal(true)"
               >
                 <div
-                  class="aspect-video bg-black rounded-xl flex items-center justify-center relative overflow-hidden"
+                  class="aspect-video bg-black rounded-2xl flex items-center justify-center relative overflow-hidden"
                 >
                   <img
                     src="grafik_validasi_final.png"
                     alt="GRAFIK HASIL VALIDASI"
                     class="w-full h-full object-contain"
                   />
-
                   <div
                     class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   >
                     <div
-                      class="bg-black/80 px-4 py-2 rounded-full border border-neon-green text-neon-green font-bold flex items-center gap-2"
+                      class="bg-black/80 px-6 py-3 rounded-full border border-neon-green text-neon-green text-xl font-bold flex items-center gap-3"
                     >
                       <i class="fa-solid fa-expand"></i> Click to Expand
                     </div>
                   </div>
                 </div>
               </div>
-              <p class="text-center text-gray-500 mt-2 text-sm italic">
+              <p class="text-center text-gray-500 mt-4 text-lg italic">
                 Klik gambar untuk memperbesar
               </p>
             </div>
 
             <div>
-              <h2 class="text-4xl font-head font-bold mb-8 text-white">
+              <h2 class="text-5xl font-head font-bold mb-10 text-white">
                 Akurasi Model
               </h2>
-              <div class="space-y-8">
-                <div class="glass-card p-8 border-l-8 border-neon-blue">
+              <div class="space-y-10">
+                <div class="glass-card p-10 border-l-[10px] border-neon-blue">
                   <h4
-                    class="text-gray-400 text-sm font-bold uppercase tracking-widest mb-2"
+                    class="text-gray-400 text-lg font-bold uppercase tracking-widest mb-2"
                   >
                     MAPE ICE (Bensin)
                   </h4>
-                  <span class="text-6xl font-bold text-white">1.74%</span>
-                  <p class="text-lg text-neon-blue mt-2 font-bold">
+                  <span class="text-7xl font-bold text-white">1.74%</span>
+                  <p class="text-2xl text-neon-blue mt-2 font-bold">
                     Sangat Akurat
                   </p>
                 </div>
 
-                <div class="glass-card p-8 border-l-8 border-neon-green">
+                <div class="glass-card p-10 border-l-[10px] border-neon-green">
                   <h4
-                    class="text-gray-400 text-sm font-bold uppercase tracking-widest mb-2"
+                    class="text-gray-400 text-lg font-bold uppercase tracking-widest mb-2"
                   >
                     MAPE EV (Listrik)
                   </h4>
-                  <span class="text-6xl font-bold text-white">8.16%</span>
-                  <p class="text-lg text-neon-green mt-2 font-bold">
+                  <span class="text-7xl font-bold text-white">8.16%</span>
+                  <p class="text-2xl text-neon-green mt-2 font-bold">
                     Kategori Baik
                   </p>
                 </div>
@@ -932,66 +957,62 @@
         </div>
 
         <div class="swiper-slide">
-          <div class="w-full max-w-7xl relative z-10">
-            <h2 class="text-5xl font-head font-bold mb-12 text-center">
+          <div class="w-full max-w-[90vw] relative z-10">
+            <h2 class="text-6xl font-head font-bold mb-16 text-center">
               Inside the Numbers
             </h2>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div class="glass-card p-8 text-center">
-                <h3 class="text-gray-400 text-lg mb-2">Stimulasi Bensin</h3>
-                <p class="text-5xl font-bold text-neon-red mb-2">0.058</p>
-                <p class="text-sm text-gray-500">Pasar Jenuh</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div class="glass-card p-10 text-center">
+                <h3 class="text-gray-400 text-2xl mb-4">Stimulasi Bensin</h3>
+                <p class="text-6xl font-bold text-neon-red mb-2">0.058</p>
+                <p class="text-lg text-gray-500">Pasar Jenuh</p>
               </div>
               <div
-                class="glass-card p-8 text-center border-2 border-neon-green/20"
+                class="glass-card p-10 text-center border-2 border-neon-green/20"
               >
-                <h3 class="text-gray-400 text-lg mb-2">Stimulasi EV</h3>
-                <p class="text-5xl font-bold text-neon-green mb-2">0.316</p>
-                <p class="text-sm text-gray-500">5x Lebih Agresif</p>
+                <h3 class="text-gray-400 text-2xl mb-4">Stimulasi EV</h3>
+                <p class="text-6xl font-bold text-neon-green mb-2">0.316</p>
+                <p class="text-lg text-gray-500">5x Lebih Agresif</p>
               </div>
-              <div class="glass-card p-8 text-center">
-                <h3 class="text-gray-400 text-lg mb-2">Kompetisi Dasar</h3>
-                <p class="text-5xl font-bold text-white mb-2">1.5%</p>
-                <p class="text-sm text-gray-500">Perpindahan Alami</p>
+              <div class="glass-card p-10 text-center">
+                <h3 class="text-gray-400 text-2xl mb-4">Kompetisi Dasar</h3>
+                <p class="text-6xl font-bold text-white mb-2">1.5%</p>
+                <p class="text-lg text-gray-500">Perpindahan Alami</p>
               </div>
-              <div class="glass-card p-8 text-center bg-white/5">
-                <h3 class="text-gray-400 text-lg mb-2">
-                  Sensitivitas Harga ($k$)
-                </h3>
-                <p class="text-5xl font-bold text-neon-blue mb-2">1.85</p>
-                <p class="text-sm text-gray-500">Sangat Tinggi</p>
+              <div class="glass-card p-10 text-center bg-white/5">
+                <h3 class="text-gray-400 text-2xl mb-4">Sensitivitas ($k$)</h3>
+                <p class="text-6xl font-bold text-neon-blue mb-2">1.85</p>
+                <p class="text-lg text-gray-500">Sangat Tinggi</p>
               </div>
             </div>
 
-            <div class="deep-dive-card mt-12">
-              <div class="deep-dive-label">
+            <div class="deep-dive-card mt-16">
+              <div class="deep-dive-label text-xl">
                 <i class="fa-solid fa-money-bill-wave"></i> IMPLIKASI EKONOMI
               </div>
-              <p class="text-lg text-gray-300 leading-relaxed">
-                Nilai $k = 1.85$ sangat tinggi, menunjukkan elastisitas silang
-                yang besar. Konsumen Indonesia sangat rasional terhadap biaya
-                operasional. Subsidi tarif listrik sedikit saja akan memicu
-                migrasi besar-besaran ke EV karena nilai $\beta$ akan naik
-                eksponensial.
+              <p class="text-2xl text-gray-300 leading-relaxed">
+                Nilai $k = 1.85$ sangat tinggi. Konsumen Indonesia sangat
+                rasional terhadap biaya. Subsidi tarif listrik sedikit saja akan
+                memicu migrasi besar-besaran karena $\beta$ naik eksponensial.
               </p>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
-          <div class="w-full max-w-7xl relative z-10">
-            <h2 class="text-6xl font-head font-bold mb-16">Conclusion</h2>
+          <div class="w-full max-w-[85vw] relative z-10">
+            <h2 class="text-7xl font-head font-bold mb-16">Conclusion</h2>
 
-            <div class="space-y-8 text-xl">
+            <div class="space-y-10 text-2xl">
               <div
-                class="flex items-center gap-8 p-8 glass-card hover:bg-white/5 transition-colors"
+                class="flex items-center gap-10 p-8 glass-card hover:bg-white/5 transition-colors"
               >
-                <div class="text-5xl text-neon-green">
+                <div class="text-6xl text-neon-green">
                   <i class="fa-solid fa-check-double"></i>
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold text-white mb-2">
+                  <h3 class="text-3xl font-bold text-white mb-2">
                     Validitas Tinggi
                   </h3>
                   <p class="text-gray-400">
@@ -1002,33 +1023,38 @@
               </div>
 
               <div
-                class="flex items-center gap-8 p-8 glass-card hover:bg-white/5 transition-colors"
+                class="flex items-center gap-10 p-8 glass-card hover:bg-white/5 transition-colors"
               >
-                <div class="text-5xl text-neon-orange">
+                <div class="text-6xl text-neon-blue">
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+                <div>
+                  <h3 class="text-3xl font-bold text-white mb-2">
+                    Pergeseran Tren
+                  </h3>
+                  <p class="text-gray-400">
+                    Pasar melewati titik belok. Bensin masuk fase
+                    <em>Decline</em>, EV masuk fase <em>Take-off</em>.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center gap-10 p-8 glass-card hover:bg-white/5 transition-colors"
+              >
+                <div class="text-6xl text-neon-orange">
                   <i class="fa-solid fa-wallet"></i>
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold text-white mb-2">
+                  <h3 class="text-3xl font-bold text-white mb-2">
                     TCO is King
                   </h3>
                   <p class="text-gray-400">
                     Kunci percepatan EV adalah melebarkan gap biaya operasional
-                    (Rp/km) melalui kebijakan energi.
+                    (Rp/km).
                   </p>
                 </div>
               </div>
-            </div>
-
-            <div class="deep-dive-card mt-12">
-              <div class="deep-dive-label">
-                <i class="fa-solid fa-gavel"></i> REKOMENDASI KEBIJAKAN
-              </div>
-              <p class="text-lg text-gray-300">
-                Insentif pembelian unit (diskon PPN) membantu jangka pendek,
-                namun <strong>subsidi tarif listrik per kWh</strong> atau
-                disinsentif harga BBM akan memiliki dampak jangka panjang yang
-                lebih permanen terhadap populasi EV.
-              </p>
             </div>
           </div>
         </div>
@@ -1036,51 +1062,51 @@
         <div class="swiper-slide">
           <div class="text-center relative z-10">
             <h2
-              class="text-8xl md:text-9xl font-head font-black mb-10 text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-purple-600 drop-shadow-2xl"
+              class="text-8xl md:text-giant font-head font-black mb-12 text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-purple-600 drop-shadow-2xl"
             >
               THANK YOU
             </h2>
 
-            <div class="flex justify-center gap-8 mt-16">
+            <div class="flex justify-center gap-10 mt-16">
               <div
-                class="glass-card px-8 py-4 rounded-full flex items-center gap-4"
+                class="glass-card px-10 py-5 rounded-full flex items-center gap-5"
               >
                 <img
                   src="https://api.dicebear.com/9.x/notionists/svg?seed=Jessica"
-                  class="w-12 h-12 rounded-full bg-gray-200"
+                  class="w-16 h-16 rounded-full bg-gray-200"
                 />
-                <span class="text-xl font-bold">Adjie</span>
+                <span class="text-2xl font-bold">Adjie</span>
               </div>
               <div
-                class="glass-card px-8 py-4 rounded-full flex items-center gap-4"
+                class="glass-card px-10 py-5 rounded-full flex items-center gap-5"
               >
                 <img
                   src="https://api.dicebear.com/9.x/notionists/svg?seed=Alexander"
-                  class="w-12 h-12 rounded-full bg-gray-200"
+                  class="w-16 h-16 rounded-full bg-gray-200"
                 />
-                <span class="text-xl font-bold">Farhan</span>
+                <span class="text-2xl font-bold">Farhan</span>
               </div>
               <div
-                class="glass-card px-8 py-4 rounded-full flex items-center gap-4"
+                class="glass-card px-10 py-5 rounded-full flex items-center gap-5"
               >
                 <img
                   src="https://api.dicebear.com/9.x/notionists/svg?seed=Liliana"
-                  class="w-12 h-12 rounded-full bg-gray-200"
+                  class="w-16 h-16 rounded-full bg-gray-200"
                 />
-                <span class="text-xl font-bold">Rippun</span>
+                <span class="text-2xl font-bold">Rippun</span>
               </div>
               <div
-                class="glass-card px-8 py-4 rounded-full flex items-center gap-4"
+                class="glass-card px-10 py-5 rounded-full flex items-center gap-5"
               >
                 <img
                   src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden"
-                  class="w-12 h-12 rounded-full bg-gray-200"
+                  class="w-16 h-16 rounded-full bg-gray-200"
                 />
-                <span class="text-xl font-bold">Tiara</span>
+                <span class="text-2xl font-bold">Tiara</span>
               </div>
             </div>
 
-            <div class="mt-16 text-sm text-gray-500 font-mono tracking-widest">
+            <div class="mt-20 text-lg text-gray-500 font-mono tracking-widest">
               UNIVERSITAS PERTAMINA | ILMU KOMPUTER | 2025
             </div>
           </div>
@@ -1129,12 +1155,10 @@
         const modal = document.getElementById("fullscreenModal");
         if (show) {
           modal.classList.remove("hidden");
-          // Prevent scrolling when modal is open
           swiper.mousewheel.disable();
           swiper.keyboard.disable();
         } else {
           modal.classList.add("hidden");
-          // Re-enable scrolling
           swiper.mousewheel.enable();
           swiper.keyboard.enable();
         }
