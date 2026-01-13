@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EV vs ICE: Final Presentation</title>
+    <title>EV vs ICE: Final Defense</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,7 +32,9 @@
             ["\\(", "\\)"],
           ],
         },
-        chtml: { scale: 1.6 } /* Scale besar untuk presentasi */,
+        /* REVISI: Scale diturunkan ke 1.2 agar tidak jebol layout, 
+               karena ukuran font container sudah besar (text-2xl) */
+        chtml: { scale: 1.2 },
       };
     </script>
     <script
@@ -215,6 +217,22 @@
       }
       #fullscreenModal:not(.hidden) .modal-content {
         transform: scale(1);
+      }
+
+      /* REVISI: Custom Scrollbar untuk rumus yang kepanjangan */
+      .math-overflow {
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding-bottom: 10px; /* Space untuk scrollbar */
+      }
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .math-overflow::-webkit-scrollbar {
+        height: 4px;
+      }
+      .math-overflow::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 2px;
       }
     </style>
   </head>
@@ -469,7 +487,7 @@
                   </h3>
                 </div>
                 <p class="text-gray-200 text-2xl leading-relaxed mb-8">
-                  Model Pertumbuhan Teknologi Asimetris.
+                  Model Pertumbuhan Teknologi Asimetris (Kurva-J).
                 </p>
                 <div
                   class="deep-dive-card mt-0 bg-neon-blue/5 border-neon-blue"
@@ -525,7 +543,7 @@
               class="glass-card p-12 mb-12 text-center border-2 border-white/10"
             >
               <p
-                class="text-4xl font-serif italic mb-2 tracking-wide text-white"
+                class="text-5xl font-serif italic mb-2 tracking-wide text-white"
               >
                 $$ \frac{dy}{dt} = \underbrace{p \cdot
                 y(t)^a}_{\text{PERTUMBUHAN}} - \underbrace{q \cdot
@@ -668,7 +686,7 @@
                 <h3 class="font-bold text-4xl mb-6 text-neon-green">
                   Biaya EV
                 </h3>
-                <div class="text-2xl font-bold text-white">
+                <div class="text-3xl font-bold text-white">
                   $$ C_{EV} = \frac{\text{Tarif (Rp/kWh)}}{\text{Km/kWh}} $$
                 </div>
               </div>
@@ -699,7 +717,7 @@
               class="glass-card p-10 mb-8 relative overflow-hidden text-center bg-black/40"
             >
               <div
-                class="text-3xl md:text-3xl text-white font-medium leading-relaxed py-2"
+                class="text-3xl md:text-4xl text-white font-medium leading-relaxed py-2 math-overflow"
               >
                 $$ \frac{dz_1}{dt} = \underbrace{(p_1 z_1^{a_1} - q_1
                 z_1^{b_1})}_{\text{Pertumbuhan Internal}} -
@@ -707,7 +725,7 @@
               </div>
               <div class="w-full h-px bg-white/20 my-4"></div>
               <div
-                class="text-3xl md:text-3xl text-white font-medium leading-relaxed py-2"
+                class="text-3xl md:text-4xl text-white font-medium leading-relaxed py-2 math-overflow"
               >
                 $$ \frac{dz_2}{dt} = \underbrace{(p_2 z_2^{a_2} - q_2(t)
                 z_2^{b_2})}_{\text{Pertumbuhan Internal}} -
@@ -780,10 +798,12 @@
                   Dinamika Beta ($\beta$)
                 </h3>
                 <div
-                  class="bg-black/40 p-6 rounded-2xl text-xl font-mono text-neon-orange mb-6 border border-white/10 text-center"
+                  class="bg-black/40 p-6 rounded-2xl mb-6 border border-white/10 text-center math-overflow"
                 >
-                  $$ \beta_{12}(t) = \beta_{base} \cdot \exp\left( k \cdot
-                  \frac{C_{BBM}(t) - C_{EV}(t)}{C_{BBM}(t)} \right) $$
+                  <div class="text-xl text-neon-orange font-mono">
+                    $$ \beta_{12}(t) = \beta_{base} \cdot \exp\left( k \cdot
+                    \frac{C_{BBM}(t) - C_{EV}(t)}{C_{BBM}(t)} \right) $$
+                  </div>
                 </div>
                 <div class="space-y-4">
                   <p
@@ -812,9 +832,11 @@
                   Dinamika Hambatan ($q$)
                 </h3>
                 <div
-                  class="bg-black/40 p-6 rounded-2xl text-2xl font-mono text-neon-green mb-6 border border-white/10 text-center"
+                  class="bg-black/40 p-6 rounded-2xl mb-6 border border-white/10 text-center math-overflow"
                 >
-                  $$ q_2(t) = \frac{q_{base}}{\ln(1 + \text{SPKLU})} $$
+                  <div class="text-xl text-neon-green font-mono">
+                    $$ q_2(t) = \frac{q_{base}}{\ln(1 + \text{SPKLU})} $$
+                  </div>
                 </div>
                 <div class="space-y-4">
                   <p
